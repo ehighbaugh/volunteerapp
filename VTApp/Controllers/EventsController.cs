@@ -47,7 +47,7 @@ namespace VTApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,Date,StartTime,EndTime")] Event @event)
+        public ActionResult Create([Bind(Include = "Id,Name,Date,StartTime,EndTime")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace VTApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,Date,StartTime,EndTime")] Event @event)
+        public ActionResult Edit([Bind(Include = "Id,Name,Date,StartTime,EndTime")] Event @event)
         {
             if (ModelState.IsValid)
             {

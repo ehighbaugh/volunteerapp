@@ -8,18 +8,18 @@ namespace VTApp.Models
 {
     public class Event
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public String Date { get; set; }
         public String StartTime { get; set; }
         public String EndTime { get; set; }
 
         public ICollection<Volunteer> Volunteers { get; set; }
-        public ICollection<Organization> Organizations { get; set; }
+        public ICollection<EventOrganization> Organizations { get; set; }
 
         public Event()
         {
-            
+            Organizations = new List<EventOrganization>();
         }
     }
 }
