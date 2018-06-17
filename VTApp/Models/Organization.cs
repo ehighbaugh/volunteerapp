@@ -21,6 +21,7 @@ namespace VTApp.Models
         public Organization()
         {
             Events = new List<EventOrganization>();
+            Volunteers = new List<Volunteer>();
         }
     }
 }

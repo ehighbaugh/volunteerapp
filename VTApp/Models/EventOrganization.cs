@@ -10,9 +10,11 @@ namespace VTApp.Models
         public int Id { get; set; }
         public int EventId { get; set; }
         public int OrganizationId { get; set; }
+        public int VolunteerId { get; set; }
 
         public Event Event { get; set; }
         public Organization Organization {get; set;}
+        public Volunteer Volunteer { get; set; }
 
     }
 }
