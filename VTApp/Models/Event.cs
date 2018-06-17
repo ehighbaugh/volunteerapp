@@ -16,5 +16,10 @@ namespace VTApp.Models
 
         public ICollection<Volunteer> Volunteers { get; set; }
         public ICollection<Organization> Organizations { get; set; }
+
+        public Event()
+        {
+            
+        }
     }
 }
