@@ -12,7 +12,6 @@ namespace VTApp.Data
     {
         public DbSet<Volunteer> Volunteers { get; set; }
         public DbSet<Event> Events { get; set; }
-        public DbSet<Organization> Organizations { get; set; }
 
         public VolunteerAppContext()
         {

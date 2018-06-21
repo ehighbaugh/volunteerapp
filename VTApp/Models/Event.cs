@@ -10,16 +10,28 @@ namespace VTApp.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public String Date { get; set; }
-        public String StartTime { get; set; }
-        public String EndTime { get; set; }
 
-        public ICollection<Volunteer> Volunteers { get; set; }
-        public ICollection<EventOrganization> Organizations { get; set; }
+        [DisplayFormat(DataFormatString="{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        public DateTime? Date { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Start Time")]
+        [DataType(DataType.Time)]
+        public DateTime? StartTime { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)]
+        [Display(Name = "End Time")]
+        [DataType(DataType.Time)]
+        public DateTime? EndTime { get; set; }
+
+        public string Organization { get; set; }
+
+        public virtual ICollection<Volunteer> Volunteers { get; set; }
 
         public Event()
         {
-            Organizations = new List<EventOrganization>();
+            Volunteers = new List<Volunteer>();
         }
     }
 }

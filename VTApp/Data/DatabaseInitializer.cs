@@ -13,15 +13,9 @@ namespace VTApp.Data
         protected override void Seed(VolunteerAppContext context)
         {
             context.Events.AddOrUpdate(x => x.Id,
-                new Event() { Id = 1, Name = "Blood Drive", Date = "01/01/2018", StartTime = "08:00", EndTime = "4:00" },
-                new Event() { Id = 2, Name = "Gala", Date = "21/01/2018", StartTime = "06:00", EndTime = "12:00" },
-                new Event() { Id = 3, Name = "Animal Adoption", Date = "31/01/2018", StartTime = "10:00", EndTime = "2:00" }
-                );
-
-            context.Organizations.AddOrUpdate(x => x.Id,
-                new Organization() { Id = 1, OrgName = "Humane Society", Cause = "Animal welfare", ContactName = "Sue Smith", Email = "sue@humane.org", Phone = "5025551212" },
-                new Organization() { Id = 2, OrgName = "County Hospital", Cause = "healthcare", ContactName = "Bob Barker", Email = "bob@hosp.org", Phone = "5022221212" },
-                new Organization() { Id = 3, OrgName = "City Society", Cause = "college scholarships", ContactName = "Carl Sagan", Email = "carl@city.org", Phone = "50254441212" }
+                new Event() { Id = 1, Name = "Blood Drive", Date = DateTime.Parse("01/01/2018"), StartTime = DateTime.Parse("08:00"), EndTime = DateTime.Parse("4:00"), Organization = "Red Cross" },//
+                new Event() { Id = 2, Name = "Gala", Date = DateTime.Parse("01/01/2018"), StartTime = DateTime.Parse("06:00"), EndTime = DateTime.Parse("12:00"), Organization = "City Society" },
+                new Event() { Id = 3, Name = "Animal Adoption", Date = DateTime.Parse("01/01/2018"), StartTime = DateTime.Parse("10:00"), EndTime = DateTime.Parse("2:00"), Organization = "Kentucky Humane Society"}
                 );
 
             context.Volunteers.AddOrUpdate(x => x.Id,

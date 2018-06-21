@@ -156,7 +156,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\OrganizationsController.cs" />
     <Compile Include="Controllers\VolunteersController.cs" />
     <Compile Include="Data\DatabaseInitializer.cs" />
     <Compile Include="Data\VolunteerAppContext.cs" />
@@ -164,8 +163,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Event.cs" />
-    <Compile Include="Models\EventOrganization.cs" />
-    <Compile Include="Models\Organization.cs" />
     <Compile Include="Models\Volunteer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -213,11 +210,6 @@
     <Content Include="Views\Events\Details.cshtml" />
     <Content Include="Views\Events\Edit.cshtml" />
     <Content Include="Views\Events\Index.cshtml" />
-    <Content Include="Views\Organizations\Create.cshtml" />
-    <Content Include="Views\Organizations\Delete.cshtml" />
-    <Content Include="Views\Organizations\Details.cshtml" />
-    <Content Include="Views\Organizations\Edit.cshtml" />
-    <Content Include="Views\Organizations\Index.cshtml" />
     <Content Include="Views\Volunteers\Create.cshtml" />
     <Content Include="Views\Volunteers\Delete.cshtml" />
     <Content Include="Views\Volunteers\Details.cshtml" />
@@ -226,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

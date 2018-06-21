@@ -13,11 +13,11 @@ namespace VTApp.Models
         public string Email { get; set; }
         public string Birthday { get; set; }
 
-        public ICollection<EventOrganization> EventOrganizations{ get; set; }
+        public virtual ICollection<Event> Events{ get; set; }
 
         public Volunteer()
         {
-            EventOrganizations = new List<EventOrganization>();
+            Events = new List<Event>();
         }
     }
 }
